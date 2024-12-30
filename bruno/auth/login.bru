@@ -1,0 +1,23 @@
+meta {
+  name: login
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/login
+  body: json
+  auth: none
+}
+
+headers {
+  X-XSRF-TOKEN: {{X-XSRF-TOKEN}}
+  Accept: application/json
+}
+
+body:json {
+  {
+    "email": "john.doe@example.com",
+    "password": "password"
+  }
+}

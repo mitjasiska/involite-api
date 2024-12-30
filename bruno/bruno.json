@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "involite-api",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

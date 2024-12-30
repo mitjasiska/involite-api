@@ -1,0 +1,15 @@
+meta {
+  name: email--verification-notification
+  type: http
+  seq: 5
+}
+
+get {
+  url: email/verification-notification
+  body: none
+  auth: none
+}
+
+headers {
+  X-XSRF-TOKEN: {{X-XSRF-TOKEN}}
+}
