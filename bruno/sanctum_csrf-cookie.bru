@@ -11,8 +11,8 @@ get {
 }
 
 script:post-response {
-  const xsrfTokenCookie = res.headers['set-cookie'][0];
-    const xsrfTokenMatch  = xsrfTokenCookie.match(/XSRF-TOKEN=([^;]+)/);
-    const xsrfToken = decodeURIComponent(xsrfTokenMatch[1]);
-    bru.setEnvVar('X-XSRF-TOKEN', xsrfToken);
+  const cookies = res.headers['set-cookie']; // Grab all cookies
+  const xsrfTokenCookie = cookies.find(cookie => cookie.startsWith('XSRF-TOKEN='));
+  const xsrfToken = decodeURIComponent(xsrfTokenCookie.match(/XSRF-TOKEN=([^;]+)/)[1]);
+  bru.setEnvVar('X-XSRF-TOKEN', xsrfToken);
 }

@@ -4,12 +4,14 @@ meta {
   seq: 5
 }
 
-get {
-  url: email/verification-notification
+post {
+  url: {{webBaseUrl}}/email/verification-notification
   body: none
   auth: none
 }
 
 headers {
   X-XSRF-TOKEN: {{X-XSRF-TOKEN}}
+  Referer: http://localhost:8000
+  Accept: application/json
 }

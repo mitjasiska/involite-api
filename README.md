@@ -16,3 +16,5 @@ Then you can run Sail commands
 
 
 ### Mailpit 
+
+http://localhost:8025/

@@ -1,0 +1,21 @@
+meta {
+  name: verify-email
+  type: http
+  seq: 9
+}
+
+get {
+  url: verify-email?id&hash
+  body: json
+  auth: none
+}
+
+params:query {
+  id: 
+  hash: 
+}
+
+headers {
+  Referer: http://localhost:8000
+  Accept: application/json
+}

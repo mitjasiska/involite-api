@@ -22,3 +22,8 @@ body:json {
     "password": "password"
   }
 }
+
+script:pre-request {
+  const token = req.headers;
+  console.log('here666', token);
+}
