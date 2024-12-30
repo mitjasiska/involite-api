@@ -1,11 +1,11 @@
 meta {
-  name: api--user
+  name: user
   type: http
-  seq: 1
+  seq: 2
 }
 
 get {
-  url: {{baseUrl}}/api/user
+  url: {{baseUrl}}/user
   body: none
   auth: none
 }
@@ -13,5 +13,5 @@ get {
 headers {
   X-XSRF-TOKEN: {{X-XSRF-TOKEN}}
   Accept: application/json
-  Referer : http://localhost:8000
+  Referer: http://localhost:8000
 }

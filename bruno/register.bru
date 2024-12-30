@@ -1,11 +1,11 @@
 meta {
-  name: login
+  name: register
   type: http
-  seq: 3
+  seq: 4
 }
 
 post {
-  url: {{baseUrl}}/login
+  url: {{webBaseUrl}}/register
   body: json
   auth: none
 }
@@ -17,7 +17,9 @@ headers {
 
 body:json {
   {
+    "name": "John Doe",
     "email": "john.doe@example.com",
-    "password": "password"
+    "password": "password",
+    "password_confirmation": "password"
   }
 }

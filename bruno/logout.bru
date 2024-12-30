@@ -1,0 +1,17 @@
+meta {
+  name: logout
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{webBaseUrl}}/logout
+  body: none
+  auth: none
+}
+
+headers {
+  X-XSRF-TOKEN: {{X-XSRF-TOKEN}}
+  Accept: application/json
+  Referer: http://localhost:8000
+}
