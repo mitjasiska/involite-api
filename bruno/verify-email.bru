@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: verify-email?id&hash
+  url: {{webBaseUrl}}/verify-email/1/73ec53c4ba1747d485ae2a0d7bfafa6cda80a5a9?expires=1735941056&signature=475df18dd1d4e38795954e253085c8e9b6c72e59dc89d4253f0ff6235bd744ba
   body: json
   auth: none
 }
 
 params:query {
-  id: 
-  hash: 
+  expires: 1735941056
+  signature: 475df18dd1d4e38795954e253085c8e9b6c72e59dc89d4253f0ff6235bd744ba
 }
 
 headers {

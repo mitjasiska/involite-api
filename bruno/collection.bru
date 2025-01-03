@@ -1,0 +1,11 @@
+script:post-response {
+  const cookies = res.headers['set-cookie']; // Grab all cookies
+  console.log(cookies)
+  if (cookies) { 
+  const xsrfTokenCookie = cookies.find(cookie => cookie.startsWith('XSRF-TOKEN='));
+  if (xsrfTokenCookie) {
+  const xsrfToken = decodeURIComponent(xsrfTokenCookie.match(/XSRF-TOKEN=([^;]+)/)[1]);
+  bru.setEnvVar('X-XSRF-TOKEN', xsrfToken);  
+  }
+  }
+}
